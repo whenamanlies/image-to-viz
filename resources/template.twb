@@ -1,0 +1,425 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook source-platform='win' version='8.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 8200.14.0720.2105                                -->
+  <preferences>
+  </preferences>
+  <datasources>
+    <datasource caption='{IMAGEDATAFILENAME}' inline='true' name='textscan.11111.111111111111' version='8.3'>
+      <connection class='textscan' directory='Data' filename='{IMAGEDATAFILENAME}.csv'>
+        <relation name='{IMAGEDATAFILENAME}#csv' table='[{IMAGEDATAFILENAME}#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='X' ordinal='0' />
+            <column datatype='integer' name='Y' ordinal='1' />
+            <column datatype='integer' name='Color' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>X</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[X]</local-name>
+            <parent-name>[{IMAGEDATAFILENAME}#csv]</parent-name>
+            <remote-alias>X</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Y</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Y]</local-name>
+            <parent-name>[{IMAGEDATAFILENAME}#csv]</parent-name>
+            <remote-alias>Y</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Color</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Color]</local-name>
+            <parent-name>[rainbow#csv]</parent-name>
+            <remote-alias>Color</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[{IMAGEDATAFILENAME}#csv]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column aggregation='Sum' datatype='integer' name='[Color]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column-instance column='[Color]' derivation='None' name='[none:Color:ok]' pivot='key' type='ordinal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Color:ok]' type='palette'>
+            <map to='#000000'><bucket>0</bucket></map>
+            <map to='#000033'><bucket>51</bucket></map>
+            <map to='#000066'><bucket>102</bucket></map>
+            <map to='#000099'><bucket>153</bucket></map>
+            <map to='#0000cc'><bucket>204</bucket></map>
+            <map to='#0000ff'><bucket>255</bucket></map>
+            <map to='#003300'><bucket>13056</bucket></map>
+            <map to='#003333'><bucket>13107</bucket></map>
+            <map to='#003366'><bucket>13158</bucket></map>
+            <map to='#003399'><bucket>13209</bucket></map>
+            <map to='#0033cc'><bucket>13260</bucket></map>
+            <map to='#0033ff'><bucket>13311</bucket></map>
+            <map to='#006600'><bucket>26112</bucket></map>
+            <map to='#006633'><bucket>26163</bucket></map>
+            <map to='#006666'><bucket>26214</bucket></map>
+            <map to='#006699'><bucket>26265</bucket></map>
+            <map to='#0066cc'><bucket>26316</bucket></map>
+            <map to='#0066ff'><bucket>26367</bucket></map>
+            <map to='#009900'><bucket>39168</bucket></map>
+            <map to='#009933'><bucket>39219</bucket></map>
+            <map to='#009966'><bucket>39270</bucket></map>
+            <map to='#009999'><bucket>39321</bucket></map>
+            <map to='#0099cc'><bucket>39372</bucket></map>
+            <map to='#0099ff'><bucket>39423</bucket></map>
+            <map to='#00cc00'><bucket>52224</bucket></map>
+            <map to='#00cc33'><bucket>52275</bucket></map>
+            <map to='#00cc66'><bucket>52326</bucket></map>
+            <map to='#00cc99'><bucket>52377</bucket></map>
+            <map to='#00cccc'><bucket>52428</bucket></map>
+            <map to='#00ccff'><bucket>52479</bucket></map>
+            <map to='#00ff00'><bucket>65280</bucket></map>
+            <map to='#00ff33'><bucket>65331</bucket></map>
+            <map to='#00ff66'><bucket>65382</bucket></map>
+            <map to='#00ff99'><bucket>65433</bucket></map>
+            <map to='#00ffcc'><bucket>65484</bucket></map>
+            <map to='#00ffff'><bucket>65535</bucket></map>
+            <map to='#330000'><bucket>3342336</bucket></map>
+            <map to='#330033'><bucket>3342387</bucket></map>
+            <map to='#330066'><bucket>3342438</bucket></map>
+            <map to='#330099'><bucket>3342489</bucket></map>
+            <map to='#3300cc'><bucket>3342540</bucket></map>
+            <map to='#3300ff'><bucket>3342591</bucket></map>
+            <map to='#333300'><bucket>3355392</bucket></map>
+            <map to='#333333'><bucket>3355443</bucket></map>
+            <map to='#333366'><bucket>3355494</bucket></map>
+            <map to='#333399'><bucket>3355545</bucket></map>
+            <map to='#3333cc'><bucket>3355596</bucket></map>
+            <map to='#3333ff'><bucket>3355647</bucket></map>
+            <map to='#336600'><bucket>3368448</bucket></map>
+            <map to='#336633'><bucket>3368499</bucket></map>
+            <map to='#336666'><bucket>3368550</bucket></map>
+            <map to='#336699'><bucket>3368601</bucket></map>
+            <map to='#3366cc'><bucket>3368652</bucket></map>
+            <map to='#3366ff'><bucket>3368703</bucket></map>
+            <map to='#339900'><bucket>3381504</bucket></map>
+            <map to='#339933'><bucket>3381555</bucket></map>
+            <map to='#339966'><bucket>3381606</bucket></map>
+            <map to='#339999'><bucket>3381657</bucket></map>
+            <map to='#3399cc'><bucket>3381708</bucket></map>
+            <map to='#3399ff'><bucket>3381759</bucket></map>
+            <map to='#33cc00'><bucket>3394560</bucket></map>
+            <map to='#33cc33'><bucket>3394611</bucket></map>
+            <map to='#33cc66'><bucket>3394662</bucket></map>
+            <map to='#33cc99'><bucket>3394713</bucket></map>
+            <map to='#33cccc'><bucket>3394764</bucket></map>
+            <map to='#33ccff'><bucket>3394815</bucket></map>
+            <map to='#33ff00'><bucket>3407616</bucket></map>
+            <map to='#33ff33'><bucket>3407667</bucket></map>
+            <map to='#33ff66'><bucket>3407718</bucket></map>
+            <map to='#33ff99'><bucket>3407769</bucket></map>
+            <map to='#33ffcc'><bucket>3407820</bucket></map>
+            <map to='#33ffff'><bucket>3407871</bucket></map>
+            <map to='#660000'><bucket>6684672</bucket></map>
+            <map to='#660033'><bucket>6684723</bucket></map>
+            <map to='#660066'><bucket>6684774</bucket></map>
+            <map to='#660099'><bucket>6684825</bucket></map>
+            <map to='#6600cc'><bucket>6684876</bucket></map>
+            <map to='#6600ff'><bucket>6684927</bucket></map>
+            <map to='#663300'><bucket>6697728</bucket></map>
+            <map to='#663333'><bucket>6697779</bucket></map>
+            <map to='#663366'><bucket>6697830</bucket></map>
+            <map to='#663399'><bucket>6697881</bucket></map>
+            <map to='#6633cc'><bucket>6697932</bucket></map>
+            <map to='#6633ff'><bucket>6697983</bucket></map>
+            <map to='#666600'><bucket>6710784</bucket></map>
+            <map to='#666633'><bucket>6710835</bucket></map>
+            <map to='#666666'><bucket>6710886</bucket></map>
+            <map to='#666699'><bucket>6710937</bucket></map>
+            <map to='#6666cc'><bucket>6710988</bucket></map>
+            <map to='#6666ff'><bucket>6711039</bucket></map>
+            <map to='#669900'><bucket>6723840</bucket></map>
+            <map to='#669933'><bucket>6723891</bucket></map>
+            <map to='#669966'><bucket>6723942</bucket></map>
+            <map to='#669999'><bucket>6723993</bucket></map>
+            <map to='#6699cc'><bucket>6724044</bucket></map>
+            <map to='#6699ff'><bucket>6724095</bucket></map>
+            <map to='#66cc00'><bucket>6736896</bucket></map>
+            <map to='#66cc33'><bucket>6736947</bucket></map>
+            <map to='#66cc66'><bucket>6736998</bucket></map>
+            <map to='#66cc99'><bucket>6737049</bucket></map>
+            <map to='#66cccc'><bucket>6737100</bucket></map>
+            <map to='#66ccff'><bucket>6737151</bucket></map>
+            <map to='#66ff00'><bucket>6749952</bucket></map>
+            <map to='#66ff33'><bucket>6750003</bucket></map>
+            <map to='#66ff66'><bucket>6750054</bucket></map>
+            <map to='#66ff99'><bucket>6750105</bucket></map>
+            <map to='#66ffcc'><bucket>6750156</bucket></map>
+            <map to='#66ffff'><bucket>6750207</bucket></map>
+            <map to='#990000'><bucket>10027008</bucket></map>
+            <map to='#990033'><bucket>10027059</bucket></map>
+            <map to='#990066'><bucket>10027110</bucket></map>
+            <map to='#990099'><bucket>10027161</bucket></map>
+            <map to='#9900cc'><bucket>10027212</bucket></map>
+            <map to='#9900ff'><bucket>10027263</bucket></map>
+            <map to='#993300'><bucket>10040064</bucket></map>
+            <map to='#993333'><bucket>10040115</bucket></map>
+            <map to='#993366'><bucket>10040166</bucket></map>
+            <map to='#993399'><bucket>10040217</bucket></map>
+            <map to='#9933cc'><bucket>10040268</bucket></map>
+            <map to='#9933ff'><bucket>10040319</bucket></map>
+            <map to='#996600'><bucket>10053120</bucket></map>
+            <map to='#996633'><bucket>10053171</bucket></map>
+            <map to='#996666'><bucket>10053222</bucket></map>
+            <map to='#996699'><bucket>10053273</bucket></map>
+            <map to='#9966cc'><bucket>10053324</bucket></map>
+            <map to='#9966ff'><bucket>10053375</bucket></map>
+            <map to='#999900'><bucket>10066176</bucket></map>
+            <map to='#999933'><bucket>10066227</bucket></map>
+            <map to='#999966'><bucket>10066278</bucket></map>
+            <map to='#999999'><bucket>10066329</bucket></map>
+            <map to='#9999cc'><bucket>10066380</bucket></map>
+            <map to='#9999ff'><bucket>10066431</bucket></map>
+            <map to='#99cc00'><bucket>10079232</bucket></map>
+            <map to='#99cc33'><bucket>10079283</bucket></map>
+            <map to='#99cc66'><bucket>10079334</bucket></map>
+            <map to='#99cc99'><bucket>10079385</bucket></map>
+            <map to='#99cccc'><bucket>10079436</bucket></map>
+            <map to='#99ccff'><bucket>10079487</bucket></map>
+            <map to='#99ff00'><bucket>10092288</bucket></map>
+            <map to='#99ff33'><bucket>10092339</bucket></map>
+            <map to='#99ff66'><bucket>10092390</bucket></map>
+            <map to='#99ff99'><bucket>10092441</bucket></map>
+            <map to='#99ffcc'><bucket>10092492</bucket></map>
+            <map to='#99ffff'><bucket>10092543</bucket></map>
+            <map to='#cc0000'><bucket>13369344</bucket></map>
+            <map to='#cc0033'><bucket>13369395</bucket></map>
+            <map to='#cc0066'><bucket>13369446</bucket></map>
+            <map to='#cc0099'><bucket>13369497</bucket></map>
+            <map to='#cc00cc'><bucket>13369548</bucket></map>
+            <map to='#cc00ff'><bucket>13369599</bucket></map>
+            <map to='#cc3300'><bucket>13382400</bucket></map>
+            <map to='#cc3333'><bucket>13382451</bucket></map>
+            <map to='#cc3366'><bucket>13382502</bucket></map>
+            <map to='#cc3399'><bucket>13382553</bucket></map>
+            <map to='#cc33cc'><bucket>13382604</bucket></map>
+            <map to='#cc33ff'><bucket>13382655</bucket></map>
+            <map to='#cc6600'><bucket>13395456</bucket></map>
+            <map to='#cc6633'><bucket>13395507</bucket></map>
+            <map to='#cc6666'><bucket>13395558</bucket></map>
+            <map to='#cc6699'><bucket>13395609</bucket></map>
+            <map to='#cc66cc'><bucket>13395660</bucket></map>
+            <map to='#cc66ff'><bucket>13395711</bucket></map>
+            <map to='#cc9900'><bucket>13408512</bucket></map>
+            <map to='#cc9933'><bucket>13408563</bucket></map>
+            <map to='#cc9966'><bucket>13408614</bucket></map>
+            <map to='#cc9999'><bucket>13408665</bucket></map>
+            <map to='#cc99cc'><bucket>13408716</bucket></map>
+            <map to='#cc99ff'><bucket>13408767</bucket></map>
+            <map to='#cccc00'><bucket>13421568</bucket></map>
+            <map to='#cccc33'><bucket>13421619</bucket></map>
+            <map to='#cccc66'><bucket>13421670</bucket></map>
+            <map to='#cccc99'><bucket>13421721</bucket></map>
+            <map to='#cccccc'><bucket>13421772</bucket></map>
+            <map to='#ccccff'><bucket>13421823</bucket></map>
+            <map to='#ccff00'><bucket>13434624</bucket></map>
+            <map to='#ccff33'><bucket>13434675</bucket></map>
+            <map to='#ccff66'><bucket>13434726</bucket></map>
+            <map to='#ccff99'><bucket>13434777</bucket></map>
+            <map to='#ccffcc'><bucket>13434828</bucket></map>
+            <map to='#ccffff'><bucket>13434879</bucket></map>
+            <map to='#ff0000'><bucket>16711680</bucket></map>
+            <map to='#ff0033'><bucket>16711731</bucket></map>
+            <map to='#ff0066'><bucket>16711782</bucket></map>
+            <map to='#ff0099'><bucket>16711833</bucket></map>
+            <map to='#ff00cc'><bucket>16711884</bucket></map>
+            <map to='#ff00ff'><bucket>16711935</bucket></map>
+            <map to='#ff3300'><bucket>16724736</bucket></map>
+            <map to='#ff3333'><bucket>16724787</bucket></map>
+            <map to='#ff3366'><bucket>16724838</bucket></map>
+            <map to='#ff3399'><bucket>16724889</bucket></map>
+            <map to='#ff33cc'><bucket>16724940</bucket></map>
+            <map to='#ff33ff'><bucket>16724991</bucket></map>
+            <map to='#ff6600'><bucket>16737792</bucket></map>
+            <map to='#ff6633'><bucket>16737843</bucket></map>
+            <map to='#ff6666'><bucket>16737894</bucket></map>
+            <map to='#ff6699'><bucket>16737945</bucket></map>
+            <map to='#ff66cc'><bucket>16737996</bucket></map>
+            <map to='#ff66ff'><bucket>16738047</bucket></map>
+            <map to='#ff9900'><bucket>16750848</bucket></map>
+            <map to='#ff9933'><bucket>16750899</bucket></map>
+            <map to='#ff9966'><bucket>16750950</bucket></map>
+            <map to='#ff9999'><bucket>16751001</bucket></map>
+            <map to='#ff99cc'><bucket>16751052</bucket></map>
+            <map to='#ff99ff'><bucket>16751103</bucket></map>
+            <map to='#ffcc00'><bucket>16763904</bucket></map>
+            <map to='#ffcc33'><bucket>16763955</bucket></map>
+            <map to='#ffcc66'><bucket>16764006</bucket></map>
+            <map to='#ffcc99'><bucket>16764057</bucket></map>
+            <map to='#ffcccc'><bucket>16764108</bucket></map>
+            <map to='#ffccff'><bucket>16764159</bucket></map>
+            <map to='#ffff00'><bucket>16776960</bucket></map>
+            <map to='#ffff33'><bucket>16777011</bucket></map>
+            <map to='#ffff66'><bucket>16777062</bucket></map>
+            <map to='#ffff99'><bucket>16777113</bucket></map>
+            <map to='#ffffcc'><bucket>16777164</bucket></map>
+            <map to='#ffffff'><bucket>16777215</bucket></map>
+          </encoding>
+        </style-rule>
+      </style>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='ImageSheet'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='{IMAGEDATAFILENAME}' name='textscan.11111.111111111111' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.11111.111111111111'>
+            <column aggregation='Sum' datatype='integer' name='[Color]' role='dimension' type='ordinal'>
+            </column>
+            <column datatype='integer' name='[X]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='integer' name='[Y]' role='measure' type='quantitative'>
+            </column>
+            <column-instance column='[Color]' derivation='None' name='[none:Color:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[X]' derivation='Sum' name='[sum:X:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Y]' derivation='Sum' name='[sum:Y:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='subtitle' class='0' field='[textscan.11111.111111111111].[sum:Y:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[textscan.11111.111111111111].[sum:Y:qk]' scope='rows' value='true' />
+            <encoding attr='space' class='0' field='[textscan.11111.111111111111].[sum:Y:qk]' field-type='quantitative' max='{AXISHEIGHT}' min='0' range-type='fixed' scope='rows' type='space' />
+            <format attr='display' class='0' field='[textscan.11111.111111111111].[sum:Y:qk]' scope='rows' value='false' />
+            <format attr='subtitle' class='0' field='[textscan.11111.111111111111].[sum:X:qk]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='0' field='[textscan.11111.111111111111].[sum:X:qk]' scope='cols' value='true' />
+            <encoding attr='space' class='0' field='[textscan.11111.111111111111].[sum:X:qk]' field-type='quantitative' max='{AXISWIDTH}' min='0' range-type='fixed' scope='cols' type='space' />
+            <format attr='display' class='0' field='[textscan.11111.111111111111].[sum:X:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='in-tooltip' field='[textscan.11111.111111111111].[none:Color:ok]' value='false' />
+            <format attr='in-tooltip' field='[textscan.11111.111111111111].[sum:Y:qk]' value='false' />
+            <format attr='in-tooltip' field='[textscan.11111.111111111111].[sum:X:qk]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[textscan.11111.111111111111].[none:Color:ok]' />
+              <lod column='[textscan.11111.111111111111].[none:Color:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.0099999997764825821' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.11111.111111111111].[sum:Y:qk]</rows>
+        <cols>[textscan.11111.111111111111].[sum:X:qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard horizontal-align='center' name='Image' vertical-align='center'>
+      <style>
+      </style>
+      <size maxheight='{DASHBOARDHEIGHT}' maxwidth='{DASHBOARDWIDTH}' minheight='{DASHBOARDHEIGHT}' minwidth='{DASHBOARDWIDTH}' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='1' name='ImageSheet' w='100000' x='0' y='0'>
+          </zone>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows pres-mode='true'>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='dashboard' maximized='1' name='Image'>
+      <zones>
+        <zone name='ImageSheet'>
+          <viewpoint>
+            <zoom type='entire-view' />
+          </viewpoint>
+        </zone>
+      </zones>
+    </window>
+    <window class='hidden-worksheet' name='ImageSheet'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+      </viewpoint>
+      <highlight>
+        <color-one-way>
+          <field>[textscan.11111.111111111111].[none:Color:ok]</field>
+        </color-one-way>
+      </highlight>
+      <selection-collection>
+      </selection-collection>
+    </window>
+  </windows>
+  <thumbnails>
+  </thumbnails>
+</workbook>
